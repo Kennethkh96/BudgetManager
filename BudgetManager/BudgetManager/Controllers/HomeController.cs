@@ -26,5 +26,11 @@ namespace BudgetManager.Controllers
 
             return View();
         }
+        public ActionResult Create()
+        {
+            ViewBag.Message = "Create Budget.";
+
+            return View();
+        }
     }
 }
