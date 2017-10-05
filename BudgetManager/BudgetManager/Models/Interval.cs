@@ -9,5 +9,11 @@ namespace BudgetManager.Models
     {
         public string IntervalTitle { get; set; }
         public int IntervalValue { get; set; }
+
+        public Interval(string title, int value)
+        {
+            IntervalTitle = title;
+            IntervalValue = value;
+        }
     }
 }

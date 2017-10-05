@@ -1,4 +1,4 @@
-﻿@model BudgetManager.Models.Budgets
+﻿@model BudgetManager.Models.Budget
 
 @{
     ViewBag.Title = "Create";
@@ -42,15 +42,15 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FK_VisibilityId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FK_VisibilityId, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.FK_VisibilityId, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.DropDownListFor(model => model.FK_VisibilityId, new SelectList(ViewBag.Visibiltys, "Id", "VisibilityTitle"), new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.FK_VisibilityId, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.FK_IntervalTitle, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FK_IntervalTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.FK_IntervalTitle, new SelectList(ViewBag.Intervals, "IntervalTitle", "IntervalTitle"), new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.FK_IntervalTitle, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -64,7 +64,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to home", "Index")
 </div>
 
 @section Scripts {
