@@ -26,3 +26,12 @@ CREATE TABLE Budgets
 	FOREIGN KEY (Fk_VisbilityId) REFERENCES Visibility(Id),
 	FOREIGN KEY (FK_IntervalTitle) REFERENCES Interval(IntervalTitle),
 )
+
+insert into Visibility 
+	(Title, [Description])
+		VALUES 
+			('Public', 'Everybody can see this'), ('Private', 'Only you can see this');
+insert into Interval
+	(IntervalTitle, IntervalValue)
+		VALUES
+			('Monthly', 1), ('Quarter', 3)
