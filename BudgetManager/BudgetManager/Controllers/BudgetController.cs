@@ -17,6 +17,8 @@ namespace BudgetManager.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            if (TempData["Message"] != null)
+                ViewBag.Message = TempData["Message"];
             return View();
         }
 
@@ -44,8 +46,8 @@ namespace BudgetManager.Controllers
                 try
                 {
                     db.CreateBudget(bud);
-                    ViewBag.Message = "Budget was successfully created";
-                    return View("Index");
+                    TempData["Message"] = "Budget was successfully created";
+                    return RedirectToAction("Index");
                 }
                 catch (Exception)
                 {

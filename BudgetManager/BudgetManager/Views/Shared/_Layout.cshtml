@@ -40,7 +40,9 @@
     @if (ViewBag.Message != null && ViewBag.Message != "")
     {
     <script>
-        alert('@ViewBag.Message');
+        $(document).ready(function () {
+            alert('@ViewBag.Message');
+        });
     </script>
         
     }
