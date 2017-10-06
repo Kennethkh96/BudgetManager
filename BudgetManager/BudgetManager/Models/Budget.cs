@@ -10,6 +10,7 @@ namespace BudgetManager.Models
     public class Budget
     {
         [Required(ErrorMessage = "Purpose is required")]
+        [StringLength(100, ErrorMessage = "Purpose has a max length of 100 characters")]
         public string Purpose { get; set; }
 
         [DisplayName("Accounting year")]
@@ -20,6 +21,7 @@ namespace BudgetManager.Models
 
         [DisplayName("Budget title")]
         [Required(ErrorMessage = "Budget title is required")]
+        [StringLength(100, ErrorMessage = "Budget title has a max length of 100 characters")]
         public string BudgetTitle { get; set; }
 
         [DisplayName("Visibilty")]
