@@ -10,6 +10,7 @@ using System.Net;
 
 namespace BudgetManager.Controllers
 {
+    //Dette er en kommentar
     public class BudgetController : Controller
     {
         private IDbContext db = new Db();
