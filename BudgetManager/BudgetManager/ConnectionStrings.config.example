@@ -1,3 +1,0 @@
-﻿<connectionStrings>
-  <add name="DbCon" connectionString="" providerName="System.Data.SqlClient"/>
-</connectionStrings>
